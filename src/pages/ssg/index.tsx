@@ -1,7 +1,9 @@
-export const SSG = ({ usersData }: any) => {
+export const SSG = ({ usersData, currentTime }: any) => {
+  console.log("front")
   return (
     <div className="w-full mx-auto py-8">
       <h2 className="text-[32px] text-center py-8">SSG</h2>
+      <div className="text-[32px] text-center">{currentTime}</div>
       <table className="border max-w-[800px] w-full mx-auto">
         <thead className="border">
           <tr>
@@ -37,10 +39,18 @@ export const getStaticProps = async () => {
     username: user.username,
     email: user.email,
   }))
+  console.log("server")
+  const time = new Date()
+  const hour = time.getHours()
+  const minute = time.getMinutes()
+  const second = time.getSeconds()
+  const currentTime = hour + "時" + minute + "分" + second + "秒"
+  console.log(currentTime)
 
   return {
     props: {
-      usersData
+      usersData,
+      currentTime
     }
   }
 }
