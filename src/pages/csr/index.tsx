@@ -11,7 +11,6 @@ export const CSR = () => {
   const minute = time.getMinutes()
   const second = time.getSeconds()
   const currentTime = hour + "時" + minute + "分" + second + "秒"
-  console.log(currentTime)
   if (error) {
     return <div>error</div>
   }
