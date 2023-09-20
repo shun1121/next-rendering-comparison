@@ -11,7 +11,7 @@ export const SSR = ({ usersData, currentTime }: any) => {
           ssg
         </Link>
       </nav>
-      <h2 className="text-[32px] text-center py-8">SSR</h2>
+      <h2 className="text-[32px] text-center pt-[64px] pb-8">SSR</h2>
       <div className="text-[32px] text-center">{currentTime}</div>
       {usersData ? (
         <table className="border max-w-[800px] w-full mx-auto">
