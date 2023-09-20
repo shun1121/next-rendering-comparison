@@ -1,6 +1,16 @@
+import Link from "next/link"
+
 export const SSR = ({ usersData, currentTime }: any) => {
   return (
     <div className="w-full mx-auto py-8">
+      <nav className="ml-10 flex gap-2 underline">
+        <Link href="/csr">
+          csr
+        </Link>
+        <Link href="/ssg">
+          ssg
+        </Link>
+      </nav>
       <h2 className="text-[32px] text-center py-8">SSR</h2>
       <div className="text-[32px] text-center">{currentTime}</div>
       {usersData ? (

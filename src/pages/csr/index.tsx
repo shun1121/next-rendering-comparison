@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import useSWR from 'swr';
 
 export const CSR = () => {
@@ -18,7 +19,15 @@ export const CSR = () => {
     return <div>Loading</div>;
   }
   return (
-    <div>
+    <div className="w-full mx-auto py-8">
+      <nav className="ml-10 flex gap-2 underline">
+        <Link href="/ssg">
+          ssg
+        </Link>
+        <Link href="/ssr">
+          ssr
+        </Link>
+      </nav>
       <div className="w-full mx-auto py-8">
         <h2 className="text-[32px] text-center py-8">CSR</h2>
         <div className="text-[32px] text-center">{currentTime}</div>

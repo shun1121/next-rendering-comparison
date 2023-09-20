@@ -1,6 +1,16 @@
+import Link from "next/link"
+
 export const SSG = ({ usersData, currentTime }: any) => {
   return (
     <div className="w-full mx-auto py-8">
+      <nav className="ml-10 flex gap-2 underline">
+        <Link href="/csr">
+          csr
+        </Link>
+        <Link href="/ssr">
+          ssr
+        </Link>
+      </nav>
       <h2 className="text-[32px] text-center py-8">SSG</h2>
       <div className="text-[32px] text-center">{currentTime}</div>
       <table className="border max-w-[800px] w-full mx-auto">
